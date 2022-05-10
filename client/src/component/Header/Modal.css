@@ -1,17 +1,17 @@
 .uploadBackground {
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     background-color: rgba(200, 200, 200);
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* padding-top: 500px; */
+    border-radius: 12px;
   }
   
   .uploadContainer {
     width: 500px;
-    height: 500px;
-    border-radius: 12px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
@@ -19,6 +19,16 @@
     padding: 25px;
   }
   
+
+  .uploadHeader{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .sumbitTitle{
+    padding-right: 80px;
+  }
+
   .uploadContainer .sumbitTitle {
     display: inline-block;
     text-align: center;
@@ -28,14 +38,13 @@
   .titleCloseBtn {
     display: flex;
     justify-content: flex-end;
-  }
-  
-  .titleCloseBtn button {
     background-color: transparent;
     border: none;
     font-size: 25px;
     cursor: pointer;
+    padding-bottom: 58px;
   }
+  
   
   .uploadContainer .body {
     flex: 50%;
@@ -68,3 +77,35 @@
   #cancelBtn {
     background-color: crimson;
   }
+
+
+  .image-preview{
+    width: 450px;
+    height: 300px;
+    /* padding-right: 25px; */
+  }
+
+  .form-group{
+    padding-right: 35px;
+  }
+
+  .formName {
+    font-size: 16px;
+    line-height: 28px;
+    padding: 8px 16px;
+    max-width: 400px;
+    width: 100%;
+    min-height: 44px;
+    border: unset;
+    border-radius: 4px;
+    outline-color: rgb(84 105 212 / 0.5);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    
+}
