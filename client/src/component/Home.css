@@ -127,7 +127,7 @@
 }
 
 .tv {
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: row;
     /* width: 350px;
@@ -152,7 +152,7 @@
 
 
   .tv2 {
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: row;
     /* width: 350px;
