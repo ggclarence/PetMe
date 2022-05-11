@@ -1,12 +1,34 @@
 import React, {useState,useEffect} from 'react';
+import MainCard from './MainCard';
+import "./Home.css"
 
 
 
 
+function HomeDefault({user}){
+    
+    const [post,setPost] = useState([])
 
-function HomeDefault(){
+    useEffect(() => {
+        fetch("/posts").then((response) => {
+          if (response.ok) {
+            response.json().then((user) => setPost(user));
+          }
+        });
+      }, []);
+    
+    
+    
+    const postMap = post.map((post)=>{
+        return <MainCard post={post} user={user}/>
+    })
+    
+    console.log(postMap)
+    
     return(
-        <p>321321</p>
+        <div id="containerCTN">
+            {postMap}
+        </div>
     )
 }
 

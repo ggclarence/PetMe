@@ -1,0 +1,181 @@
+.postProfilePic{
+    border-radius: 50%;
+    width: 60px;
+    height: 50px;
+    padding: 10px;
+}
+
+.postHeader{
+    display: flex;
+    background-color: antiquewhite;
+    width: 40%;
+    align-items: center;
+    border-style: groove;
+    border-bottom-style: none;
+    border-color: #ff00522b;
+}
+
+.postHomeContainter{
+    padding: 50px;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* border-style: groove; */
+    
+}
+
+.postPicture{
+    width: 40%;
+    max-height: 600px;
+    /* padding: 12px; */
+    border-style: groove;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-color: #ff00522b;
+    
+}
+
+.postProfileName{
+    padding: 10px;
+}
+
+.postFooter{
+    display: flex;
+  
+    width: 40%;
+    align-items: center;
+    border-style: groove;
+    border-top-style: none;
+    border-color: #ff00522b;
+}
+
+.postBtns{
+    width: 50px;
+}
+
+.postBtnsContainter{
+    display: flex;
+}
+
+.postDes{
+    padding-left: 15px;
+    font-size: x-large;
+}
+
+.commentSection{
+    display: flex;
+    align-items: center;
+}
+
+.commentInput{
+    font-size: 16px;
+    font-family: 'Nova Mono', monospace;
+    line-height: 28px;
+    padding: 8px 16px;
+    max-width: 400px;
+    width: 400px;
+    /* min-height: 44px; */
+    border: unset;
+    border-radius: 4px;
+    outline-color: rgb(84 105 212 / 0.5);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    
+}
+
+.postSumbitBtn{
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Nova Mono', monospace;
+}
+
+.contentDiv{
+    display: flex;
+    align-items: baseline;
+}
+
+.contentMainContainer{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    overflow: auto;
+    max-height: 200px;
+   
+}
+
+.contentH1{
+    font-size: 22px;
+}
+
+.contentP{
+    padding-left: 10px;
+}
+
+.tv {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* width: 350px;
+    height: 550px; */
+    background: white;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+    /* color: white; */
+    box-shadow: 10px 1px rgba(0,0,0,.15);
+    transition: all .4s ease;
+  }
+  #tv:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+    box-shadow: 10px 2px rgba(0,0,0,.25);
+  }
+  
+
+  .heart{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+
+  .tv2 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* width: 350px;
+    height: 550px; */
+    background: rgb(240, 200, 200);
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+    /* color: white; */
+    box-shadow: 10px 1px rgba(0,0,0,.15);
+    transition: all .4s ease;
+    padding-left: 3px;
+  }
+  .tv:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+    box-shadow: 10px 2px rgba(0,0,0,.25);
+  }
+
+  #containerCTN{
+      box-sizing: border-box;
+      margin: 100px;
+      margin-right: 200px;
+  }
+
+  .test{
+      display: flex;
+      flex-direction: row;
+  }

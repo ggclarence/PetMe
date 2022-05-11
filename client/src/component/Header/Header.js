@@ -1,34 +1,40 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import "./Header.css"
-
+import SearchOptions from "./SearchOptions.js"
 function Header({logo,user,setOpenUploadModal}){
     const [filter,setFilter] = useState("")
-    
+    const [listOfUsers,setListOfUsers] = useState([])
+    console.log(listOfUsers)
     
     function handleClick(event){
-        setFilter(event.target.value)
+        window.location.href=`/${event.target.value}`
     // this will send a fetch request to the database
     }
 
-   
+    useEffect(() => {
+        fetch("/users").then((response) => {
+          if (response.ok) {
+            response.json().then((user) => setListOfUsers(user));
+          }
+        });
+      }, []);
 
     
     function closeUploadModal(){
         setOpenUploadModal(false)
     }
 
-
+    const mapUsers = listOfUsers.map((user)=>{
+        return <SearchOptions user={user}/>
+    })
     return(
         <div className="containterhead">
         <h2 className="logo" onClick={event =>  window.location.href='/'} >PetMe</h2>
-        {/* id="logo" */}
+     
         <select  onChange={handleClick}>
-        {/*  class="filterSelect */}
-            <option>All</option>
-            <option>Dogs</option>
-            <option>Cats</option>
-            <option>Bunnies</option>
-            <option>Other</option>
+            <option>Search For Users</option>
+            {mapUsers}
+
         </select>
         
         

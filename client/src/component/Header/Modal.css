@@ -109,3 +109,25 @@
                 rgba(0, 0, 0, 0) 0px 0px 0px 0px;
     
 }
+
+.uploadContainer2 {
+  width: 500px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  align-items: center;
+}
+
+.btnLogin{
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+}

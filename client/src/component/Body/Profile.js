@@ -28,10 +28,15 @@ function handleLogout() {
        {user ? (
        (user.username === profile.username) ? (
         <div className="profile">
-        <h1 className="profileName">{profile.username}</h1>
+          <div className="profileHeader">
         <img className="profilePic" src={profile.profilePicUrl} alt="profile pic"></img>
-        <button class="btn btn-gradient btn-glow" onClick={handleLogout}>Logout</button>
+        <div className="profileHeaderTop">
+          <h1 className="profileName">{profile.username}</h1>
+          <button class="lgtbtn" onClick={handleLogout}>Logout</button>
+         </div>
         <p>{profile.bio}</p>
+        </div>
+
         <div className="images">
         <p>Images</p>
         <ProfilePost userPost={profile.posts}/>

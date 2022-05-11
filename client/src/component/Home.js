@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 // import {Link} from "react-router-dom"
 import HomeDefault from './HomeDefualt';
 import Signup from "./Header/Signup"
-
+import "./Header/Modal.css"
 function Home({user,onLogin,modalUploadStatus}){
 
     console.log(modalUploadStatus)
@@ -61,29 +61,34 @@ function Home({user,onLogin,modalUploadStatus}){
          
          {user ? (
              <div>
-                 <HomeDefault/>
+                 <HomeDefault user={user}/>
             {/* <p>user is logged in</p> */}
             </div>
            ) : (
-        <div className="test">
-            <form onSubmit={handleSubmit} className="container" >
-                <label for="username"><b>Username/Email</b> </label>
-                    <br></br>
-                <input type="text" id="username"  placeholder="username" name="username"  required value={username} onChange={e => setUsername(e.target.value) }/>
+            <div className="uploadBackground">   
+        <div className="uploadContainer2">
+            <form  className="container" >
+                <label for="username"><b>Username</b> </label>
+    
+                <input type="text" className="formName"  placeholder="username" name="username"  required value={username} onChange={e => setUsername(e.target.value) }/>
                 <p className="error"> {error}</p>
-                    <br></br>
-                <label for="password"> <b>Password</b> </label>
-                    <br></br>
-                <input type="password" placeholder="password" name="password"  className="inputLogin" required  id="password"value={password} onChange={ e=> setPassword(e.target.value)}/>
+                 
+                <label className="form-group" for="password"> <b>Password</b> </label>
+                 
+                <input type="password" placeholder="password" name="password"  className="formName" required  id="password"value={password} onChange={ e=> setPassword(e.target.value)}/>
     
                 <p className="error"> {pass}</p>
-                    <br></br>
-                <div >
-                    <button  type="submit" > Login </button>       
-                </div>
+               
+                
+                      
+               
             </form>
-        <button onClick={()=>{setOpenModal(true)}} >Signup</button>
+            <div >
+            <button className='btnLogin' onClick={handleSubmit} type="submit" > Login </button>     
+            <button className='btnLogin' onClick={()=>{setOpenModal(true)}} >Signup</button>
+            </div>
         </div>     
+        </div>
            )}
            
     </div>

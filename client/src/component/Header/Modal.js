@@ -35,6 +35,7 @@ function Modal({closeUploadModal,uploadSuccess}){
     function onChange(event) {
         setNewPost({ ...newPost, [event.target.name]: event.target.value})
        }
+       console.log(newPost)
     
     
     return(
@@ -51,7 +52,7 @@ function Modal({closeUploadModal,uploadSuccess}){
                 <div className="body">
                 <ul>
                     {newPost.image_url && 
-                    <div class="form-group">
+                    <div className="form-group">
                     <img  className='image-preview' src={newPost.image_url} alt='preview'></img> 
                     </div>
                     }

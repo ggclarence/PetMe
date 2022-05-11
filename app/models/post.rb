@@ -1,7 +1,8 @@
 class Post < ApplicationRecord
     belongs_to :user
     has_many :comments
-
+    has_many :posts , through: :comments
+    has_many :likes
 
     validates :description, length: { maximum: 50}
     validates :image_url, presence: true
