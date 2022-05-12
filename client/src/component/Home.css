@@ -137,7 +137,8 @@
     /* color: white; */
     box-shadow: 10px 1px rgba(0,0,0,.15);
     transition: all .4s ease;
-    align-items: center
+    align-items: center;
+    margin-bottom: 1px;
 
 
   }
@@ -166,6 +167,7 @@
     box-shadow: 10px 1px rgba(0,0,0,.15);
     transition: all .4s ease;
     padding-left: 3px;
+    margin-bottom: 1px;
   }
   .tv:hover {
     border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
