@@ -80,7 +80,7 @@ function MainCard({post,user}){
 
 // console.log(post.likes.map((likes)=>likes.user_id))
 
-
+// test
 
     
     return(
