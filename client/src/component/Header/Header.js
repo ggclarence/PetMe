@@ -31,7 +31,7 @@ function Header({logo,user,setOpenUploadModal}){
         <div className="containterhead">
         <h2 className="logo" onClick={event =>  window.location.href='/'} >PetMe</h2>
      
-        <select  onChange={handleClick}>
+        <select className="select" onChange={handleClick}>
             <option>Search For Users</option>
             {mapUsers}
 

@@ -76,7 +76,7 @@ function MainCard({post,user}){
 // const test2 = test.map((like)=>like)
 // console.log(test)
 
-debugger
+
 
 // console.log(post.likes.map((likes)=>likes.user_id))
 
