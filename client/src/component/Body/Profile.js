@@ -18,7 +18,7 @@ function handleLogout() {
     fetch("/logout", {
       method: "DELETE",
     }).then(() => {
-        window.location.reload();
+      window.location.href=`/`;
     })
   }
 

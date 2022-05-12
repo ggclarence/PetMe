@@ -53,7 +53,7 @@ function Home({user,onLogin,modalUploadStatus}){
     return (
     <div>
         
-        { openModal && <Signup closeModal={closeModal} />}
+        { openModal && <Signup  closeModal={closeModal} />}
         {/* { openUploadModal && <Modal />} */}
         
          

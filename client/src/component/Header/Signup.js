@@ -21,8 +21,9 @@ function Signup({closeModal}){
                method: "POST",
                headers:{"Content-Type": "application/json" },
                body: JSON.stringify(newUserInfo)
-           }).then(response => console.log(response))
-           .then(data=>console.log(data))
+           }).then(()=>{
+            window.location.reload();
+           })
        }
 
 
