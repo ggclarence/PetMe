@@ -4,7 +4,7 @@ import SearchOptions from "./SearchOptions.js"
 function Header({logo,user,setOpenUploadModal}){
     const [filter,setFilter] = useState("")
     const [listOfUsers,setListOfUsers] = useState([])
-    console.log(listOfUsers)
+    // console.log(listOfUsers)
     
     function handleClick(event){
         window.location.href=`/${event.target.value}`

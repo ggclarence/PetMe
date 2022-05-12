@@ -7,7 +7,7 @@ function MainCard({post,user}){
     // console.log(post)
     const [like,setLike] = useState(false)
     const [userLikes,setUseLikes] = useState(post.likes.length)
-
+    const [currentComents,setCurrentComents] = useState(post.comments)
     
     const [newComment,setNewComment] = useState([])
   
@@ -32,6 +32,7 @@ function MainCard({post,user}){
         }).then(data => {
             if (data.ok){ 
                 uploadSuccess()
+                test()
             }else{
                 data.json().catch(err=> {
                     console.log(err)
@@ -39,7 +40,13 @@ function MainCard({post,user}){
             }
         })
     }
-    
+    console.log(currentComents)
+
+
+    function test(){
+      setCurrentComents([...currentComents, {content:newComment, user:{username:user.username} }] )
+    }
+
 
     function handleClick(event){
       
@@ -69,12 +76,12 @@ function MainCard({post,user}){
 // const test2 = test.map((like)=>like)
 // console.log(test)
 
-
+debugger
 
 // console.log(post.likes.map((likes)=>likes.user_id))
 
-console.log(post.likes.length)
-   
+
+
     
     return(
         
@@ -86,7 +93,6 @@ console.log(post.likes.length)
             </div>
             <img className="postPicture" src={post.image_url} alt="postPicture"></img>
             <div className="postFooter">
-    
                 {like ? (
                     <div className="heart">
                      <img className="postBtns" src={fullheart} alt="heart"></img>   
@@ -108,10 +114,10 @@ console.log(post.likes.length)
                     <h1  onClick={event =>  window.location.href=`/${post.user.username}`} className="contentH1">{post.user.username}</h1> 
                     <p className="contentP"> - {post.description}</p>
                 </div>}
-                {post.comments.length > 0 && (
+                {currentComents.length > 0 && (
                     
                     
-                        post.comments.map(comment => (
+                    currentComents.map(comment => (
                            
                                  <div className="tv">
                                 <h1  onClick={event =>  window.location.href=`/${comment.user.username}`} className="contentH1">{comment.user.username}</h1> 

@@ -5,7 +5,6 @@ import Signup from "./Header/Signup"
 import "./Header/Modal.css"
 function Home({user,onLogin,modalUploadStatus}){
 
-    console.log(modalUploadStatus)
     const [openModal, setOpenModal] = useState(false)
     // const [openUploadModal, setOpenUploadModal] = useState(false)
     
@@ -51,7 +50,6 @@ function Home({user,onLogin,modalUploadStatus}){
     
  }
     
-    
     return (
     <div>
         
@@ -78,10 +76,6 @@ function Home({user,onLogin,modalUploadStatus}){
                 <input type="password" placeholder="password" name="password"  className="formName" required  id="password"value={password} onChange={ e=> setPassword(e.target.value)}/>
     
                 <p className="error"> {pass}</p>
-               
-                
-                      
-               
             </form>
             <div >
             <button className='btnLogin' onClick={handleSubmit} type="submit" > Login </button>     

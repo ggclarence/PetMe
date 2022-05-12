@@ -12,7 +12,7 @@ function HomeDefault({user}){
     useEffect(() => {
         fetch("/posts").then((response) => {
           if (response.ok) {
-            response.json().then((user) => setPost(user));
+            response.json().then((user) => setPost(user.reverse()));
           }
         });
       }, []);
@@ -23,7 +23,6 @@ function HomeDefault({user}){
         return <MainCard post={post} user={user}/>
     })
     
-    console.log(postMap)
     
     return(
         <div id="containerCTN">
